@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Edu+AU+VIC+WA+NT+Hand:wght@400..700&family=Fredericka+the+Great&family=Kalnia+Glaze:wght@100..700&display=swap"
+        rel="stylesheet">
+</head>
+<style>
+    * {
+        margin: 0;
+        @media only screen and (max-width:1080px){
+            body{
+                background-color: white;
+            }
+        }
+
+    }
+
+    body {
+        background-color: #8b6c5c;
+        z-index: -1;
+
+    }
+
+    .navbar {
+        display: flex;
+        gap: 20px;
+        justify-content: space-between;
+        /* margin-left: auto; */
+        display: flex;
+        align-items: center;
+        font-size: 20px;
+        z-index: 1;
+    }
+
+    .nav {
+        border-bottom: 2px black solid;
+        padding: 20px;
+        display: flex;
+        justify-content: space-between;
+        height: 100px;
+        /* margin-left: auto; */
+        align-items: center;
+        background-color: black;
+        z-index: 1;
+    }
+
+    h1 {
+        font-size: 60px;
+        color: white;
+        z-index: 1;
+        font-family: 'fredericka the great',static;
+    }
+
+    a {
+        text-decoration: none;
+        color: white;
+        font-size: 30px;
+        z-index: 1;
+        font-family: 'fredericka the great',static;
+    }
+p{
+    font-family: 'Edu AU VIC WA NT Hand';
+}
+h2{
+    font-family: 'Edu AU VIC WA NT Hand';
+}
+    .nav a:hover,
+    h1:hover {
+        color: wheat;
+    }
+
+    .content,
+    .head {
+        color: black;
+        text-align: center;
+    }
+
+    .content {
+        z-index: 1;
+        padding: 20px;
+        margin: 20px;
+        border-radius: 10px;
+        font-size: 20px;
+        height: 1500px;
+        color: black;
+        border: 3px solid black;
+        background-color: white;
+
+    }
+
+    .form-container {
+        max-width: 500px;
+        margin: auto;
+        padding: 20px;
+        background-color: #fff;
+        border-radius: 8px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        font-family: 'Edu AU VIC WA NT Hand';
+    }
+
+    .form-container h2 {
+        text-align: center;
+        margin-bottom: 20px;
+    }
+
+    .form-group {
+        margin-bottom: 15px;
+        align-items: center;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .form-group label {
+        display: block;
+        margin-bottom: 5px;
+        font-weight: bold;
+    }
+
+    .form-group input,
+    .form-group select {
+        width: 100%;
+        padding: 10px;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+    }
+
+    .form-group select {
+        background-color: #f8f8f8;
+    }
+
+    .form-group input[type="radio"] {
+        width: auto;
+    }
+
+    .form-group .radio-label {
+        display: inline-block;
+        margin-right: 20px;
+        size: 20px;
+    }
+
+    .form-submit {
+        text-align: center;
+    }
+
+    .form-submit button {
+        padding: 10px 20px;
+        border: none;
+        background-color: #d2b48c;
+        color: #fff;
+        border-radius: 4px;
+        cursor: pointer;
+    }
+
+    .form-submit button:hover {
+        background-color: #c0a080;
+    }
+</style>
+
+<body>
+    <div class="nav">
+        <h1>THE SOFT BREW</h1>
+        <nav class="navbar">
+            <a href="index.html">HOME</a>
+            <a href=menu.html>MENU</a>
+            <a href="order.html">ORDER NOW</a>
+        </nav>
+    </div><br>
+    <div class="content">
+        <h1 class="head">Welcome! </h1><br>
+        <h2>Place your order here or at the counter and enjoy our delicious offerings. We're excited to serve you!</h2>
+
+        <br><br>
+        <div class="form-container">
+            <h2>Place Your Order</h2>
+            <form>
+                <div class="form-group">
+                    <label for="first-name">First Name</label>
+                    <input type="text" id="first-name" name="first-name" required>
+                </div><br>
+                <div class="form-group">
+                    <label for="last-name">Last Name</label>
+                    <input type="text" id="last-name" name="last-name" required>
+                </div><br>
+                <div class="form-group">
+                    <label for="phone-number">Phone Number</label>
+                    <input type="tel" id="phone-number" name="phone-number" required>
+                </div><br>
+                <div class="form-group">
+                    <label for="item">Select from beverages</label>
+                    <select id="item" name="item" required>
+                        <option value="" disabled selected>Beverages</option>
+                        <option value="coffee">Espresso</option>
+                        <option value="tea">Americano</option>
+                        <option value="sandwich">Latte</option>
+                        <option value="salad">Velevet Vanila Latte</option>
+                        <option value="coffee">Caramel Delight Latte</option>
+                        <option value="tea">Hazelnut Heaven Latte</option>
+                        <option value="sandwich">Chai Latte</option>
+                        <option value="salad">Matcha Latte</option>
+                        <option value="salad">Herbal Tea</option>
+                    </select>
+                </div><br>
+                <div class="form-group">
+                    <label for="size">Size</label>
+                    <select id="size" name="size" required>
+                        <option value="" disabled selected>Select a size</option>
+                        <option value="medium">Medium</option>
+                        <option value="large">Large</option>
+                    </select>
+                </div><br>
+                <div class="form-group">
+                    <label for="item">Select from eateries</label>
+                    <select id="item" name="item" required>
+                        <option value="" disabled selected>Eateries</option>
+                        <option value="coffee">Croissants</option>
+                        <option value="tea">Muffins</option>
+                        <option value="sandwich">Scones</option>
+                    </select>
+                </div><br>
+                <div class="form-group">
+                    <label>Dine In or Take Away</label>
+                    <div class="radio-label">
+                        <input type="radio" id="dine-in" name="order-type" value="dine-in" required>
+                        <label for="dine-in">Dine In</label>
+                    </div>
+                    <div class="radio-label">
+                        <input type="radio" id="take-away" name="order-type" value="take-away" required>
+                        <label for="take-away">Take Away</label>
+                    </div><br>
+                </div>
+                <div class="form-submit">
+                    <button type="submit">Place Order</button>
+                </div>
+            </form>
+        </div><br><br><br>
+    
+    <p><b>Thank you for stopping by! We hope you enjoyed your time with us. Looking forward to seeing you again soon!</b>
+
+    </p>
+</div>
+</body>
+
+</html>
